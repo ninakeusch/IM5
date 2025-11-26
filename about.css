@@ -1,0 +1,264 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: serif;
+    background: #7c1f34;
+    color: #f1d1d8;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav nav a {
+    font-family: "Avenir", sans-serif;
+    margin-left: 25px;
+    padding: 8px 22px;
+    background: #e49bab;
+    color: #7c1f34;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+
+/* --- Grunddesign --- */
+
+body {
+    margin: 0;
+    font-family: serif;
+    background: #7c1f34;
+    color: #f1d1d8;
+}
+
+
+
+/* --- Header --- */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #f1d1d8;
+    text-decoration: none;
+}
+
+.nav nav a {
+    margin-left: 25px;
+    padding: 8px 22px;
+    background: #e49bab;
+    color: #7c1f34;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "Avenir", sans-serif; /* falls du es eingebunden hast */
+}
+
+
+
+/* --- Inhaltslayout --- */
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 60px 60px;
+    padding: 80px 80px 200px;
+}
+
+
+
+/* --- Titel --- */
+
+.page-title {
+    grid-column: 1 / 3;
+    text-align: center;
+    margin: 40px 0 0;
+    font-size: 70px;
+}
+
+
+
+/* --- Bild rechts oben --- */
+
+.right-image img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    border-radius: 18px;
+    object-fit: cover;
+}
+
+.right-image {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* --- Textboxen --- */
+
+.text-box {
+    background: #e49bab;
+    color: #7c1f34;
+    padding: 35px 45px;
+    border-radius: 18px;
+    line-height: 1.5;
+    width: 460px;        /* ← Feste Boxbreite */
+}
+
+
+
+.text-box h2 {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.left {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.right {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+
+
+/* --- Responsive --- */
+
+@media (max-width: 900px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .page-title {
+        font-size: 50px;
+    }
+
+    .right-image {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .left { grid-column: 1; grid-row: 3; }
+    .right { grid-column: 1; grid-row: 4; }
+
+    .text-box {
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+/* Footer */
+.footer {
+    background: #d9a1b0;
+    color: #7c1f34;
+    padding-top: 50px;
+    margin-top: 200px;
+}
+
+.footer-upper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px;
+}
+
+.footer-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 60px;
+}
+
+.footer-columns {
+    display: flex;
+    gap: 80px;
+}
+
+.footer-col h4 {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.footer-col a {
+    display: block;
+    margin-bottom: 4px;
+    color: #7c1f34;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Lower Footer */
+.footer-lower {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 40px;
+    padding: 25px 0;
+    border-top: 1px solid #7c1f34;
+}
+
+.footer-lower a {
+    color: #7c1f34;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Gesamter Footer in Avenir */
+.footer,
+.footer a,
+.footer h4 {
+    font-family: "Avenir", sans-serif;
+}
+
+/* Ausnahme: Der Name "Nina Keusch" bleibt in der Standardschrift */
+.footer-name {
+    font-family: serif; /* oder die Schrift, die du willst */
+}
+
+@media (max-width: 900px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+        font-size: 48px;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .hero-left-top {
+        grid-row: 2;
+    }
+
+    .hero-right {
+        grid-row: 3;
+    }
+
+    .hero-left-bottom {
+        grid-row: 4;
+    }
+}
