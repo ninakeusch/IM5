@@ -1,0 +1,239 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: serif;
+    background: #7c1f34;
+    color: #f1d1d8;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+      text-decoration: none;    /* entfernt Unterstreichung */
+    color: inherit; 
+}
+.logo a:visited {
+    color: inherit;           /* verhindert lila visited-Farbe */
+}
+
+.logo a:hover,
+.logo a:active {
+    text-decoration: none;    /* verhindert Unterstreichung beim Hover */
+    color: inherit;           /* keine Farbänderung */
+}
+
+
+.nav nav a {
+    font-family: "Avenir", sans-serif;
+    margin-left: 25px;
+    padding: 8px 22px;
+    background: #e49bab;
+    color: #7c1f34;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+   /* übernimmt die normale Textfarbe */
+
+
+
+
+
+
+/* --- Titel --- */
+
+.page-title {
+    grid-column: 1 / 3;
+    text-align: center;
+    margin: 40px 0 0;
+    font-size: 70px;
+}
+
+/* Grundlayout bleibt */
+body {
+    margin: 0;
+    background: #7c1f34;
+    font-family: "Avenir", sans-serif;
+}
+
+/* Work Titel */
+.title {
+    text-align: center;
+    font-size: 55px;
+    margin-top: 40px;
+    color: #f5c0cb;
+    font-family: "Georgia", serif;
+}
+
+/* GRID mit exakten Positionen */
+/* GRID-SETUP — gleiche Bildhöhe garantiert */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 320px 320px 260px;
+    gap: 40px 60px;
+    padding: 100px 60px;
+}
+
+/* Bild-Container */
+.work-item {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+/* Bilder */
+.work-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+/* 🔝 OBERE ZEILE -------------------------------------- */
+
+/* Oben links */
+#img1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+/* Oben rechts */
+#img2 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+/* 🔽 MITTLERE ZEILE ----------------------------------- */
+
+/* Unten links – Bild */
+#img3 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+/* Unten rechts – große rosa Box */
+.placeholder-big {
+    grid-column: 2;
+    grid-row: 2;
+    background: #d895a5;
+    border-radius: 18px;
+}
+
+/* 🔽 UNTERE ZEILE ------------------------------------- */
+
+.placeholder-small-left {
+    grid-column: 1;
+    grid-row: 3;
+    background: #d895a5;
+    border-radius: 18px;
+}
+
+.placeholder-small-right {
+    grid-column: 2;
+    grid-row: 3;
+    background: #d895a5;
+    border-radius: 18px;
+}
+
+
+
+
+/* Footer */
+.footer {
+    background: #d9a1b0;
+    color: #7c1f34;
+    padding-top: 50px;
+    margin-top: 200px;
+}
+
+.footer-upper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px;
+}
+
+.footer-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 60px;
+}
+
+.footer-columns {
+    display: flex;
+    gap: 80px;
+}
+
+.footer-col h4 {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.footer-col a {
+    display: block;
+    margin-bottom: 4px;
+    color: #7c1f34;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Lower Footer */
+.footer-lower {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 40px;
+    padding: 25px 0;
+    border-top: 1px solid #7c1f34;
+}
+
+.footer-lower a {
+    color: #7c1f34;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Gesamter Footer in Avenir */
+.footer,
+.footer a,
+.footer h4 {
+    font-family: "Avenir", sans-serif;
+}
+
+/* Ausnahme: Der Name "Nina Keusch" bleibt in der Standardschrift */
+.footer-name {
+    font-family: serif; /* oder die Schrift, die du willst */
+}
+
+@media (max-width: 900px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+        font-size: 48px;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .hero-left-top {
+        grid-row: 2;
+    }
+
+    .hero-right {
+        grid-row: 3;
+    }
+
+    .hero-left-bottom {
+        grid-row: 4;
+    }
+}

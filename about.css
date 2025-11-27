@@ -17,6 +17,17 @@ body {
 .logo {
     font-size: 22px;
     font-weight: bold;
+      text-decoration: none;    /* entfernt Unterstreichung */
+    color: inherit; 
+}
+.logo a:visited {
+    color: inherit;           /* verhindert lila visited-Farbe */
+}
+
+.logo a:hover,
+.logo a:active {
+    text-decoration: none;    /* verhindert Unterstreichung beim Hover */
+    color: inherit;           /* keine Farbänderung */
 }
 
 .nav nav a {
@@ -72,20 +83,6 @@ body {
 
 
 
-/* --- Inhaltslayout --- */
-
-.content-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    gap: 60px 60px;
-    padding: 80px 80px 200px;
-}
-
-
-
-/* --- Titel --- */
-
 .page-title {
     grid-column: 1 / 3;
     text-align: center;
@@ -93,23 +90,42 @@ body {
     font-size: 70px;
 }
 
+/* Grundlayout bleibt */
+body {
+    margin: 0;
+    background: #7c1f34;
+    font-family: "Avenir", sans-serif;
+}
+
+/* Work Titel */
+.title {
+    text-align: center;
+    font-size: 55px;
+    margin-top: 40px;
+    color: #f5c0cb;
+    font-family: "Georgia", serif;
+}
+
 
 
 /* --- Bild rechts oben --- */
 
-.right-image img {
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* linke & rechte Spalte */
+    grid-template-rows: 320px 320px 260px;
+    gap: 40px 60px; /* vertikal / horizontal */
+    padding: 100px 60px;
+    align-items: center;
+}
+
+
+/* Bilder */
+.hero-grid img {
     width: 100%;
-    max-width: 380px;
     height: auto;
     border-radius: 18px;
     object-fit: cover;
-}
-
-.right-image {
-    grid-column: 2;
-    grid-row: 2;
-    display: flex;
-    justify-content: center;
 }
 
 
