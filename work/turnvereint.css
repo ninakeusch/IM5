@@ -31,7 +31,95 @@ body {
 }
 
 
+/* Herz links */
+.heart-label {
+    position: absolute;
+    left: 40px;
+    top: 160px;
+}
 
+.heart-label img {
+    width: 130px;
+    height: auto;
+}
+
+/* Titel */
+.page-title {
+    text-align: center;
+    font-size: 48px;
+    color: #f5ccd5;
+    margin-top: 120px;
+    font-weight: 600;
+}
+
+/* Podcast Bild */
+.podcast-image-wrapper {
+    width: 80%;
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+.podcast-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* linke & rechte Spalte */
+    grid-template-rows: 320px 320px 260px;
+    gap: 40px 60px; /* vertikal / horizontal */
+    padding: 100px 60px;
+    align-items: center;
+}
+
+
+/* Bilder */
+.hero-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    object-fit: cover;
+}
+/* Rosa Textbox */
+.text-box {
+    background: #d895a5;
+    padding: 40px 50px;
+    border-radius: 20px;
+    width: 600px;
+    max-width: 85%;
+    margin: 60px auto;
+    text-align: center;
+    color: #4b0d17;
+}
+
+.text-box h3 {
+    margin-top: 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.text-box p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .page-title {
+        font-size: 32px;
+        margin-top: 100px;
+    }
+
+    .heart-label img {
+        width: 100px;
+    }
+
+    .text-box {
+        padding: 30px 25px;
+    }
+}
 
 
 /* Footer */
