@@ -1,0 +1,182 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: serif;
+    background: #7c1f34;
+    color: #f1d1d8;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+      text-decoration: none;    /* entfernt Unterstreichung */
+    color: inherit; 
+}
+.logo a:visited {
+    color: inherit;           /* verhindert lila visited-Farbe */
+}
+
+.logo a:hover,
+.logo a:active {
+    text-decoration: none;    /* verhindert Unterstreichung beim Hover */
+    color: inherit;           /* keine Farbänderung */
+}
+
+
+.nav nav a {
+    font-family: "Avenir", sans-serif;
+    margin-left: 25px;
+    padding: 8px 22px;
+    background: #e49bab;
+    color: #7c1f34;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+   /* übernimmt die normale Textfarbe */
+
+
+
+
+
+
+   /* Hero Bereich */
+.project-hero {
+    position: relative;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.heart-badge {
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    width: 150px;
+}
+
+h1 {
+    font-family: "DM Serif Display", serif;
+    font-size: 48px;
+    margin-bottom: 40px;
+}
+
+.hero-image-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image {
+    width: 650px;
+    max-width: 90%;
+    border-radius: 18px;
+}
+
+/* Textbereiche */
+.text-section {
+    max-width: 650px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.text-section h3 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.text-section p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #fcecf2;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .heart-badge {
+        width: 120px;
+        left: 10px;
+        top: 10px;
+    }
+
+    .text-section {
+        margin: 40px 20px;
+    }
+}
+
+/* Footer */
+.footer {
+    background: #d9a1b0;
+    color: #7c1f34;
+    padding-top: 50px;
+    margin-top: 200px;
+}
+
+.footer-upper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px;
+}
+
+.footer-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 60px;
+}
+
+.footer-columns {
+    display: flex;
+    gap: 80px;
+}
+
+.footer-col h4 {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.footer-col a {
+    display: block;
+    margin-bottom: 4px;
+    color: #7c1f34;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Lower Footer */
+.footer-lower {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 40px;
+    padding: 25px 0;
+    border-top: 1px solid #7c1f34;
+}
+
+.footer-lower a {
+    color: #7c1f34;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Gesamter Footer in Avenir */
+.footer,
+.footer a,
+.footer h4 {
+    font-family: "Avenir", sans-serif;
+}
+
+/* Ausnahme: Der Name "Nina Keusch" bleibt in der Standardschrift */
+.footer-name {
+    font-family: serif; /* oder die Schrift, die du willst */
+}

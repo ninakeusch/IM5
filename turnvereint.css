@@ -17,7 +17,19 @@ body {
 .logo {
     font-size: 22px;
     font-weight: bold;
+      text-decoration: none;    /* entfernt Unterstreichung */
+    color: inherit; 
 }
+.logo a:visited {
+    color: inherit;           /* verhindert lila visited-Farbe */
+}
+
+.logo a:hover,
+.logo a:active {
+    text-decoration: none;    /* verhindert Unterstreichung beim Hover */
+    color: inherit;           /* keine Farbänderung */
+}
+
 
 .nav nav a {
     font-family: "Avenir", sans-serif;
@@ -29,98 +41,79 @@ body {
     text-decoration: none;
     font-size: 14px;
 }
+   /* übernimmt die normale Textfarbe */
 
 
-/* Herz links */
-.heart-label {
+
+
+
+
+   /* Hero Bereich */
+.project-hero {
+    position: relative;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.heart-badge {
     position: absolute;
     left: 40px;
-    top: 160px;
+    top: 40px;
+    width: 150px;
 }
 
-.heart-label img {
-    width: 130px;
-    height: auto;
-}
-
-/* Titel */
-.page-title {
-    text-align: center;
+h1 {
+    font-family: "DM Serif Display", serif;
     font-size: 48px;
-    color: #f5ccd5;
-    margin-top: 120px;
-    font-weight: 600;
+    margin-bottom: 40px;
 }
 
-/* Podcast Bild */
-.podcast-image-wrapper {
-    width: 80%;
-    max-width: 700px;
-    margin: 40px auto;
+.hero-image-wrapper {
+    display: flex;
+    justify-content: center;
 }
 
-.podcast-image {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-}
-
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* linke & rechte Spalte */
-    grid-template-rows: 320px 320px 260px;
-    gap: 40px 60px; /* vertikal / horizontal */
-    padding: 100px 60px;
-    align-items: center;
-}
-
-
-/* Bilder */
-.hero-grid img {
-    width: 100%;
-    height: auto;
+.hero-image {
+    width: 650px;
+    max-width: 90%;
     border-radius: 18px;
-    object-fit: cover;
 }
-/* Rosa Textbox */
-.text-box {
-    background: #d895a5;
-    padding: 40px 50px;
-    border-radius: 20px;
-    width: 600px;
-    max-width: 85%;
+
+/* Textbereiche */
+.text-section {
+    max-width: 650px;
     margin: 60px auto;
     text-align: center;
-    color: #4b0d17;
 }
 
-.text-box h3 {
-    margin-top: 0;
-    font-weight: bold;
-    font-size: 18px;
+.text-section h3 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    margin-bottom: 18px;
 }
 
-.text-box p {
+.text-section p {
     font-size: 14px;
-    line-height: 1.8;
+    line-height: 1.7;
+    color: #fcecf2;
 }
 
 /* Responsive */
-@media (max-width: 600px) {
-    .page-title {
+@media (max-width: 700px) {
+    h1 {
         font-size: 32px;
-        margin-top: 100px;
     }
 
-    .heart-label img {
-        width: 100px;
+    .heart-badge {
+        width: 120px;
+        left: 10px;
+        top: 10px;
     }
 
-    .text-box {
-        padding: 30px 25px;
+    .text-section {
+        margin: 40px 20px;
     }
 }
-
 
 /* Footer */
 .footer {
@@ -186,28 +179,4 @@ body {
 /* Ausnahme: Der Name "Nina Keusch" bleibt in der Standardschrift */
 .footer-name {
     font-family: serif; /* oder die Schrift, die du willst */
-}
-
-@media (max-width: 900px) {
-    .hero-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-title {
-        font-size: 48px;
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .hero-left-top {
-        grid-row: 2;
-    }
-
-    .hero-right {
-        grid-row: 3;
-    }
-
-    .hero-left-bottom {
-        grid-row: 4;
-    }
 }
