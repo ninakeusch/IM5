@@ -32,6 +32,123 @@ body {
 
 
 
+
+/*body 
+
+/* =========================
+   Grundlayout – nur Content
+   ========================= */
+
+body {
+    margin: 0;
+    background: #7c1f34;
+    color: #f1d1d8;
+    font-family: serif;
+}
+
+
+/* =========================
+   Titel
+   ========================= */
+
+.content-wrapper {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+.page-title {
+    font-size: clamp(36px, 6vw, 60px);
+    margin: 0;
+}
+
+
+/* =========================
+   Projekt Layout
+   ========================= */
+
+.project-grid {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+
+/* =========================
+   Textboxen
+   ========================= */
+
+.text-box h3 {
+    font-family: "Avenir", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+}
+.text-box {
+    max-width: 680px;      /* steuert die Textbreite */
+    margin: 0 auto;        /* zentriert */
+    padding: 0 20px;       /* Luft auf Mobile */
+}
+
+
+.text-box p {
+    font-size: 15px;
+    line-height: 1.65;
+    margin: 0;
+}
+
+
+
+/* =========================
+   Video
+   ========================= */
+
+.video-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* =========================
+   Responsive Feinschliff
+   ========================= */
+
+@media (max-width: 600px) {
+    .project-grid {
+        gap: 40px;
+    }
+
+    .text-box {
+        max-width: 100%;   /* nutzt auf Mobile die Breite besser */
+    }
+
+    .text-box p {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Footer */
 .footer {
     background: #d9a1b0;
