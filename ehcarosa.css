@@ -33,6 +33,118 @@ body {
 
 
 
+/* Body
+body {
+    margin: 0;
+    background: #7c1f34;
+    color: #f1d1d8;
+    font-family: serif;
+}
+
+/* =========================
+   Titel
+   ========================= */
+
+.content-wrapper {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+.page-title {
+    font-size: clamp(36px, 6vw, 60px);
+    margin: 0;
+}
+
+/* =========================
+   Projekt Layout
+   ========================= */
+
+.project-grid {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* =========================
+   Bild oben
+   ========================= */
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    display: block;
+}
+
+/* =========================
+   Textboxen
+   ========================= */
+
+.text-box {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-box h3 {
+    font-family: "Avenir", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+}
+
+.text-box p {
+    font-size: 15px;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* =========================
+   Externer Link unten
+   ========================= */
+
+.external-link-box {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 24px;
+    text-align: center;
+    background: #d895a5;
+    color: #7c1f34;
+    border-radius: 18px;
+    text-decoration: none;
+    font-family: "Avenir", sans-serif;
+    font-size: 15px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.external-link-box:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+/* =========================
+   Responsive
+   ========================= */
+
+@media (max-width: 600px) {
+    .project-grid {
+        gap: 40px;
+    }
+
+    .text-box {
+        max-width: 100%;
+    }
+
+    .text-box p {
+        font-size: 14px;
+    }
+}
+
+
+
 
 /* Footer */
 .footer {
