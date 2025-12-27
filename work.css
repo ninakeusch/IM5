@@ -75,75 +75,112 @@ body {
 
 /* GRID mit exakten Positionen */
 /* GRID-SETUP — gleiche Bildhöhe garantiert */
+/* =====================================
+   HERO GRID
+===================================== */
+
 .hero-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 320px 320px 260px;
     gap: 40px 60px;
-    padding: 100px 60px;
+    padding: clamp(60px, 8vw, 100px) clamp(24px, 6vw, 60px);
 }
 
-/* Bild-Container */
+/* =====================================
+   WORK ITEMS (BILDER)
+===================================== */
+
 .work-item {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
     border-radius: 18px;
+    display: block;
 }
 
-/* Bilder */
 .work-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* =====================================
+   ROSA BOXEN
+===================================== */
+
+.placeholder-big {
+    aspect-ratio: 16 / 9;
+    background: #d895a5;
     border-radius: 18px;
 }
 
-/* 🔝 OBERE ZEILE -------------------------------------- */
+.placeholder-small-left,
+.placeholder-small-right {
+    aspect-ratio: 4 / 3;
+    background: #d895a5;
+    border-radius: 18px;
+}
 
-/* Oben links */
+/* =====================================
+   GRID POSITIONEN (DESKTOP)
+===================================== */
+
 #img1 {
     grid-column: 1;
     grid-row: 1;
 }
 
-/* Oben rechts */
 #img2 {
     grid-column: 2;
     grid-row: 1;
 }
 
-/* 🔽 MITTLERE ZEILE ----------------------------------- */
-
-/* Unten links – Bild */
 #img3 {
     grid-column: 1;
     grid-row: 2;
 }
 
-/* Unten rechts – große rosa Box */
 .placeholder-big {
     grid-column: 2;
     grid-row: 2;
-    background: #d895a5;
-    border-radius: 18px;
 }
-
-/* 🔽 UNTERE ZEILE ------------------------------------- */
 
 .placeholder-small-left {
     grid-column: 1;
     grid-row: 3;
-    background: #d895a5;
-    border-radius: 18px;
 }
 
 .placeholder-small-right {
     grid-column: 2;
     grid-row: 3;
-    background: #d895a5;
-    border-radius: 18px;
 }
+
+/* =====================================
+   RESPONSIVE (MOBILE)
+===================================== */
+
+@media (max-width: 900px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 60px 20px;
+    }
+
+    /* 🔥 RESET aller Grid-Positionen */
+    .hero-grid > * {
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+
+    /* Optional: etwas größere Karten auf Mobile */
+    .work-item,
+    .placeholder-big,
+    .placeholder-small-left,
+    .placeholder-small-right {
+        aspect-ratio: 16 / 9;
+    }
+}
+
 
 
 

@@ -87,13 +87,14 @@ h1 {
 }
 
 .text-section h3 {
-    font-family: "Inter", sans-serif;
+    font-family: "Avenir", sans-serif;
     font-weight: 600;
     margin-bottom: 18px;
 }
 
 .text-section p {
-    font-size: 14px;
+    font-family: "Avenir", sans-serif;
+    font-size: 16px;
     line-height: 1.7;
     color: #fcecf2;
 }

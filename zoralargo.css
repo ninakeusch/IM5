@@ -82,7 +82,7 @@ body {
 
 .text-box h3 {
     font-family: "Avenir", sans-serif;
-    font-size: 14px;
+    font-size: 22px;
     letter-spacing: 0.05em;
     margin-bottom: 12px;
 }
@@ -94,7 +94,8 @@ body {
 
 
 .text-box p {
-    font-size: 15px;
+    font-family: "Avenir", sans-serif;
+    font-size: 16px;
     line-height: 1.65;
     margin: 0;
 }
