@@ -44,7 +44,11 @@ body {
    /* übernimmt die normale Textfarbe */
 
 
-
+h1 {
+    font-family: "DM Serif Display", serif;
+    font-size: 48px;
+    margin-bottom: 40px;
+}
 
 
 

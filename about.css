@@ -41,7 +41,11 @@ body {
     font-size: 14px;
 }
 
-
+h1 {
+    font-family: "DM Serif Display", serif;
+    font-size: 48px;
+    margin-bottom: 40px;
+}
 
 /* --- Grunddesign --- */
 
@@ -108,82 +112,118 @@ body {
 
 
 
-/* --- Bild rechts oben --- */
+/* =========================
+   GRUNDLAYOUT
+   ========================= */
 
-.hero-grid {
+.about-wrapper {
+    padding: 100px 60px 140px;
+    color: #f1d1d8;
+}
+
+/* =========================
+   TITEL
+   ========================= */
+
+.page-title {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 80px;
+}
+
+/* =========================
+   OBERER BEREICH
+   ========================= */
+
+.about-top {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* linke & rechte Spalte */
-    grid-template-rows: 320px 320px 260px;
-    gap: 40px 60px; /* vertikal / horizontal */
-    padding: 100px 60px;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
+    gap: 60px;
+    margin-bottom: 100px;
 }
 
-
-/* Bilder */
-.hero-grid img {
+.about-image img {
     width: 100%;
-    height: auto;
-    border-radius: 18px;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
+    border-radius: 18px;
 }
 
+.about-title {
+    font-size: 48px;
+    font-weight: normal;
+}
 
+/* =========================
+   TEXTBOXEN
+   ========================= */
 
-/* --- Textboxen --- */
+.about-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
 
 .text-box {
-    background: #e49bab;
+    background: #e4a6b4;
     color: #7c1f34;
-    padding: 35px 45px;
+    padding: 35px;
     border-radius: 18px;
-    line-height: 1.5;
-    width: 460px;        /* ← Feste Boxbreite */
+
+    aspect-ratio: 3 / 4; /* Hochformat */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-
-
-.text-box h2 {
+.text-box h3 {
     margin-top: 0;
     font-size: 20px;
-    font-weight: bold;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
 }
 
-.left {
-    grid-column: 1;
-    grid-row: 3;
+.text-box p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
 }
 
-.right {
-    grid-column: 2;
-    grid-row: 3;
-}
-
-
-
-/* --- Responsive --- */
+/* =========================
+   RESPONSIVE
+   ========================= */
 
 @media (max-width: 900px) {
-    .content-wrapper {
-        grid-template-columns: 1fr;
+
+    .about-wrapper {
+        padding: 60px 20px 100px;
     }
 
     .page-title {
-        font-size: 50px;
+        font-size: 36px;
+        margin-bottom: 50px;
     }
 
-    .right-image {
-        grid-column: 1;
-        grid-row: 2;
+    .about-top {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 
-    .left { grid-column: 1; grid-row: 3; }
-    .right { grid-column: 1; grid-row: 4; }
+    .about-title {
+        font-size: 32px;
+    }
+
+    .about-boxes {
+        grid-template-columns: 1fr;
+    }
 
     .text-box {
-        max-width: 100%;
+        aspect-ratio: auto;
     }
 }
+
+
 
 
 

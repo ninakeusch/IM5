@@ -13,7 +13,13 @@ body {
     align-items: center;
     padding: 30px 40px;
 }
-
+.logo {
+    font-family: "Avenir", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    text-decoration: none;
+    color: inherit;
+}
 .logo {
     font-size: 22px;
     font-weight: bold;

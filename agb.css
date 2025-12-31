@@ -1,9 +1,8 @@
-/* General Styling */
 body {
     margin: 0;
-    font-family: serif;
     background: #7c1f34;
     color: #f1d1d8;
+    font-family: serif;
 }
 
 /* Navigation */
@@ -13,30 +12,14 @@ body {
     align-items: center;
     padding: 30px 40px;
 }
+
 .logo {
     font-family: "Avenir", sans-serif;
     font-size: 22px;
     font-weight: 600;
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
 }
-
-.logo {
-    font-size: 22px;
-    font-weight: bold;
-      text-decoration: none;    /* entfernt Unterstreichung */
-    color: inherit; 
-}
-.logo a:visited {
-    color: inherit;           /* verhindert lila visited-Farbe */
-}
-
-.logo a:hover,
-.logo a:active {
-    text-decoration: none;    /* verhindert Unterstreichung beim Hover */
-    color: inherit;           /* keine Farbänderung */
-}
-
 
 .nav nav a {
     font-family: "Avenir", sans-serif;
@@ -48,79 +31,38 @@ body {
     text-decoration: none;
     font-size: 14px;
 }
-   /* übernimmt die normale Textfarbe */
 
-
-
-
-
-
-   /* Hero Bereich */
-.project-hero {
-    position: relative;
-    text-align: center;
-    margin-top: 60px;
+/* AGB */
+.legal-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 120px 30px 100px;
 }
 
-.heart-badge {
-    position: absolute;
-    left: 40px;
-    top: 40px;
-    width: 150px;
-}
-
-h1 {
+.legal-wrapper h1 {
     font-family: "DM Serif Display", serif;
-    font-size: 48px;
-    margin-bottom: 40px;
-}
-
-.hero-image-wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-.hero-image {
-    width: 650px;
-    max-width: 90%;
-    border-radius: 18px;
-}
-
-/* Textbereiche */
-.text-section {
-    max-width: 650px;
-    margin: 60px auto;
+    font-size: clamp(34px, 6vw, 54px);
+    margin-bottom: 60px;
     text-align: center;
 }
 
-.text-section h3 {
-    font-family: "Avenir", sans-serif;
-    font-weight: 600;
-    margin-bottom: 18px;
+.legal-section {
+    margin-bottom: 50px;
 }
 
-.text-section p {
+.legal-section h2 {
     font-family: "Avenir", sans-serif;
-    font-size: 16px;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+}
+
+.legal-section p {
+    font-family: "Avenir", sans-serif;
+    font-size: 15px;
     line-height: 1.7;
-    color: #fcecf2;
-}
-
-/* Responsive */
-@media (max-width: 700px) {
-    h1 {
-        font-size: 32px;
-    }
-
-    .heart-badge {
-        width: 120px;
-        left: 10px;
-        top: 10px;
-    }
-
-    .text-section {
-        margin: 40px 20px;
-    }
+    max-width: 620px;
 }
 
 /* Footer */
@@ -188,3 +130,28 @@ h1 {
 .footer-name {
     font-family: serif; /* oder die Schrift, die du willst */
 }
+
+@media (max-width: 900px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+        font-size: 48px;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .hero-left-top {
+        grid-row: 2;
+    }
+
+    .hero-right {
+        grid-row: 3;
+    }
+
+    .hero-left-bottom {
+        grid-row: 4;
+    }
+}
+

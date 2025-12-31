@@ -18,67 +18,53 @@
     </nav>
 </header>
 
+<!-- Contact Section -->
+ <main class="contact-wrapper">
 
+    <h1>Kontakt</h1>
 
-
-<!-- Hero Section -->
-<section class="project-hero">
-
-    <img src="images/herz.png" alt="Herzensprojekt" class="heart-badge">
-
-    <h1>TurnvereinT Podcast</h1>
-
-    <div class="hero-image-wrapper">
-        <img src="images/work.turnvereint.png" class="hero-image" alt="TurnvereinT Podcast">
-    </div>
-
-</section>
-
-<!-- Textblock 1 -->
-<section class="text-section">
-    
-    <p>
-        TurnvereinT ist ein vielseitiger Podcast rund um den Turnsport in der Schweiz. Spannende Gäste teilen 
-        hier ihre Liebe zum Sport und zur Gemeinschaft, die in den Schweizer Turnvereinen gelebt wird. Von 
-        Vereinspräsidentinnen über Choreografinnen bekannter Showgruppen bis hin zu beeindruckenden 
-        Verletzungsgeschichten war über die beiden Staffeln, die im Herbstsemester 2024 und im Frühlingssemester 
-        2025 entstanden sind, alles dabei. Keine Folge gleicht der anderen – und trotzdem spürt man in allen die 
-        Leidenschaft für den Turnsport.
+    <p class="intro-text">
+        Schön, dass du hier bist.  
+        Ob für ein Projekt, eine Zusammenarbeit oder einfach ein nettes Hallo –  
+        ich freue mich, von dir zu hören.
     </p>
-</section>
 
-<!-- Textblock 2 -->
-<section class="text-section">
-        
-<p>
-        Der Turnsport in der Schweiz ist weit mehr als nur ein Sport – er ist eine grosse Familie. Genau dieses 
-        Gefühl wollte ich mit dem Podcast nach aussen tragen. Es sollte ein Podcast mit, über und für die Vereine 
-        werden. Das Interesse, mehr über andere Vereine und Bereiche des Turnsports zu erfahren, ist gross – und 
-        diese Lücke wollte ich füllen. Mit TurnvereinT habe ich den ersten Podcast über den Schweizer Turnsport 
-        gestartet. Ich möchte eine Plattform schaffen, auf der sich jede Sparte des Turnsports vertreten 
-        fühlt – und daran werde ich weiterhin arbeiten.</p>
-</section>
+    <section class="contact-grid">
 
-<section class="text-section">
-<p>
-        Der Schweizerische Turnverband ist mit seinen 362’000 Mitgliedern der grösste polysportive Sportverband der 
-        Schweiz. Zieht man die französisch- und italienischsprachigen Mitglieder ab, bleibt immer noch eine grosse Zahl 
-        potenzieller Hörer*innen – das Potenzial ist also gross. Pro Folge habe ich jeweils zwei Gäste eingeladen, die 
-        ihren Verein, ihre Showgruppe, etc. vertreten. Das Gespräch habe ich bewusst gemütlich, aber trotzdem informativ 
-        gestaltet. Über Instagram habe ich den Podcast zusätzlich verbreitet und konnte dabei auch von der Reichweite 
-        meiner Gäste profitieren. </p>
-        </section>
+        <!-- Instagram -->
+        <div class="contact-box">
+            <h3>Instagram</h3>
+            <a href="https://www.instagram.com/ninakeusch/" target="_blank">
+                @ninakeusch
+            </a>
+            <a href="https://www.instagram.com/turnvereint_podcast/" target="_blank">
+                @turnvereint_podcast
+            </a>
+        </div>
 
-        <section class="text-section">
-<p>
-        Ich hatte zuvor keinerlei Erfahrung mit Podcasts oder Audioproduktionen – das hat definitiv Zeit und Mühe gekostet. 
-        Zudem bin ich nicht die extrovertierteste Person und musste ziemlich aus mir herauskommen. Trotzdem bin ich froh 
-        und stolz, dass ich es gewagt habe. Das Ganze ist für mich ein echtes Herzensprojekt. Es gibt kein Thema, für das 
-        ich mehr brenne als für die Turnwelt, und genau das machte die Arbeit an diesem Projekt zu einer tollen Erfahrung. 
-        Die positiven Rückmeldungen – sowohl von Bekannten als auch von Fremden – und die steigenden Hörerzahlen waren das 
-        Sahnehäubchen obendrauf.
-        </p>
-</section>
+        <div class="contact-box">
+    <h3>E-Mail</h3>
+
+    <button class="copy-email" data-email="nina.keusch@stud.fhgr.ch">
+        nina.keusch@stud.fhgr.ch
+    </button>
+
+    <p class="copy-hint" id="copyHint">Adresse kopiert ✓</p>
+</div>
+
+
+    </section>
+
+    <p class="closing-text">
+        Ich antworte in der Regel zeitnah  
+        und freue mich auf den Austausch mit dir!
+    </p>
+
+</main>
+
+
+
+
 <!-- Footer -->
 <footer class="footer">
 
@@ -96,19 +82,38 @@
 
             <div class="footer-col">
                 <h4>Social Media</h4>
-                <a href="#">Instagram</a>
-                <a href="#">Spotify</a>
+                <a href="https://www.instagram.com/ninakeusch/">Instagram Nina Keusch</a>
+                <a href="https://www.instagram.com/turnvereint_podcast/">Instagram TurnvereinT</a>
+                <a href="https://open.spotify.com/show/4LJNSFyDuGO69NJE5Zq81B?si=T1J18wGuSNOYvJaW0H9bQg">Spotify</a>
             </div>
         </div>
     </div>
 
     <div class="footer-lower">
-        <a href="#">Impressum</a>
-        <a href="#">Datenschutz</a>
-        <a href="#">Kontakt</a>
-        <a href="#">AGB</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="contact.html">Kontakt</a>
+        <a href="agb.html">AGB</a>
     </div>
 
 </footer>
+<script>
+    const buttons = document.querySelectorAll(".copy-email");
+    const hint = document.getElementById("copyHint");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            const email = button.dataset.email;
+            navigator.clipboard.writeText(email);
+
+            hint.style.opacity = 1;
+
+            setTimeout(() => {
+                hint.style.opacity = 0;
+            }, 2000);
+        });
+    });
+</script>
+
 </body>
 </html>
