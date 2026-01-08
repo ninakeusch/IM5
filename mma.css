@@ -1,8 +1,9 @@
+/* General Styling */
 body {
     margin: 0;
+    font-family: serif;
     background: #7c1f34;
     color: #f1d1d8;
-    font-family: serif;
 }
 
 /* Navigation */
@@ -12,14 +13,30 @@ body {
     align-items: center;
     padding: 30px 40px;
 }
-
 .logo {
     font-family: "Avenir", sans-serif;
     font-size: 22px;
     font-weight: 600;
-    color: inherit;
     text-decoration: none;
+    color: inherit;
 }
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+      text-decoration: none;    /* entfernt Unterstreichung */
+    color: inherit; 
+}
+.logo a:visited {
+    color: inherit;           /* verhindert lila visited-Farbe */
+}
+
+.logo a:hover,
+.logo a:active {
+    text-decoration: none;    /* verhindert Unterstreichung beim Hover */
+    color: inherit;           /* keine Farbänderung */
+}
+
 
 .nav nav a {
     font-family: "Avenir", sans-serif;
@@ -31,7 +48,7 @@ body {
     text-decoration: none;
     font-size: 14px;
 }
-
+   /* übernimmt die normale Textfarbe */
 /* =========================
    MOBILE HEADER (GLOBAL)
    ========================= */
@@ -66,88 +83,75 @@ body {
 }
 
 
-/* Datenschutz */
-.legal-wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 120px 30px 100px;
+
+
+
+
+   /* Hero Bereich */
+.project-hero {
+    position: relative;
+    text-align: center;
+    margin-top: 60px;
 }
 
-.legal-wrapper h1 {
+.heart-badge {
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    width: 150px;
+}
+
+h1 {
     font-family: "DM Serif Display", serif;
-    font-size: clamp(34px, 6vw, 54px);
-    margin-bottom: 60px;
+    font-size: 48px;
+    margin-bottom: 40px;
+}
+
+.hero-image-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image {
+    width: 650px;
+    max-width: 90%;
+    border-radius: 18px;
+}
+
+/* Textbereiche */
+.text-section {
+    max-width: 650px;
+    margin: 60px auto;
     text-align: center;
 }
 
-.legal-section {
-    margin-bottom: 50px;
+.text-section h3 {
+    font-family: "Avenir", sans-serif;
+    font-weight: 600;
+    margin-bottom: 18px;
 }
 
-.legal-section h2 {
+.text-section p {
     font-family: "Avenir", sans-serif;
-    font-size: 14px;
-    letter-spacing: 0.08em;
-    margin-bottom: 14px;
-    text-transform: uppercase;
-}
-
-.legal-section p {
-    font-family: "Avenir", sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.7;
-    max-width: 620px;
+    color: #fcecf2;
 }
 
-/* Lower Footer */
-.footer-lower {
-    display: flex;
-    justify-content: center;
-    gap: 80px;
-    margin-top: 40px;
-    padding: 25px 0;
-    border-top: 1px solid #7c1f34;
-}
-
-.footer-lower a {
-    color: #7c1f34;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-/* Gesamter Footer in Avenir */
-.footer,
-.footer a,
-.footer h4 {
-    font-family: "Avenir", sans-serif;
-}
-
-/* Ausnahme: Der Name "Nina Keusch" bleibt in der Standardschrift */
-.footer-name {
-    font-family: serif; /* oder die Schrift, die du willst */
-}
-
-@media (max-width: 900px) {
-    .hero-grid {
-        grid-template-columns: 1fr;
+/* Responsive */
+@media (max-width: 700px) {
+    h1 {
+        font-size: 32px;
     }
 
-    .hero-title {
-        font-size: 48px;
-        grid-column: 1;
-        grid-row: 1;
+    .heart-badge {
+        width: 120px;
+        left: 10px;
+        top: 10px;
     }
 
-    .hero-left-top {
-        grid-row: 2;
-    }
-
-    .hero-right {
-        grid-row: 3;
-    }
-
-    .hero-left-bottom {
-        grid-row: 4;
+    .text-section {
+        margin: 40px 20px;
     }
 }
 
@@ -216,6 +220,7 @@ body {
 .footer-name {
     font-family: serif; /* oder die Schrift, die du willst */
 }
+
 
 /* =========================
    Footer – leicht responsiv

@@ -13,6 +13,13 @@ body {
     align-items: center;
     padding: 30px 40px;
 }
+.logo {
+    font-family: "Avenir", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    text-decoration: none;
+    color: inherit;
+}
 
 .logo {
     font-size: 22px;
@@ -30,6 +37,7 @@ body {
     color: inherit;           /* keine Farbänderung */
 }
 
+
 .nav nav a {
     font-family: "Avenir", sans-serif;
     margin-left: 25px;
@@ -40,6 +48,39 @@ body {
     text-decoration: none;
     font-size: 14px;
 }
+   /* =========================
+   MOBILE HEADER (GLOBAL)
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 24px 20px 30px;
+        gap: 18px;
+    }
+
+    .logo {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .nav nav {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav nav a {
+        margin: 0;
+        padding: 10px 22px;
+        font-size: 14px;
+        border-radius: 999px;
+    }
+}
+
 
 h1 {
     font-family: "DM Serif Display", serif;
@@ -58,32 +99,7 @@ body {
 
 
 
-/* --- Header --- */
 
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 40px;
-}
-
-.logo {
-    font-size: 22px;
-    font-weight: bold;
-    color: #f1d1d8;
-    text-decoration: none;
-}
-
-.nav nav a {
-    margin-left: 25px;
-    padding: 8px 22px;
-    background: #e49bab;
-    color: #7c1f34;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 14px;
-    font-family: "Avenir", sans-serif; /* falls du es eingebunden hast */
-}
 
 
 
@@ -225,6 +241,121 @@ body {
 
 
 
+/* =========================
+   CV Layout
+   ========================= */
+
+.cv-wrapper {
+    max-width: 900px;
+    margin: 120px auto;
+    padding: 0 40px;
+    color: #f1d1d8;
+}
+
+.cv-title {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 80px;
+}
+
+/* Einzelne Sektionen */
+.cv-section {
+    margin-bottom: 60px;
+}
+
+.cv-section h3 {
+    font-family: "Avenir", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+/* CV Einträge */
+.cv-item {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.cv-year {
+    min-width: 90px;
+    font-family: "Avenir", sans-serif;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.cv-item p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.cv-highlight {
+    font-family: "Avenir", sans-serif;
+}
+
+/* Skills & Sprachen */
+.cv-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 80px;
+}
+
+.cv-box {
+    background: #e49bab;
+    color: #7c1f34;
+    padding: 40px;
+    border-radius: 18px;
+}
+
+.cv-box h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.cv-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cv-box li {
+    margin-bottom: 10px;
+    font-family: "Avenir", sans-serif;
+}
+
+/* =========================
+   Responsive
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .cv-wrapper {
+        padding: 0 25px;
+        margin: 80px auto;
+    }
+
+    .cv-title {
+        font-size: 32px;
+        margin-bottom: 50px;
+    }
+
+    .cv-item {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .cv-year {
+        min-width: auto;
+        font-size: 12px;
+    }
+
+    .cv-columns {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
 
 
 
@@ -316,5 +447,66 @@ body {
 
     .hero-left-bottom {
         grid-row: 4;
+    }
+}
+
+/* =========================
+   Footer – leicht responsiv
+   ========================= */
+
+@media (max-width: 800px) {
+
+    .footer {
+        margin-top: 120px;
+    }
+
+    .footer-upper {
+        padding: 40px 30px;
+        gap: 40px;
+    }
+
+    .footer-columns {
+        gap: 50px;
+    }
+
+    .footer-name {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+
+    .footer-lower {
+        gap: 40px;
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .footer-upper {
+        flex-direction: column;
+        align-items: flex-start; /* bewusst NICHT center */
+        padding: 30px 25px;
+        gap: 30px;
+    }
+
+    .footer-columns {
+        gap: 35px;
+    }
+
+    .footer-col h4 {
+        font-size: 13px;
+    }
+
+    .footer-col a {
+        font-size: 14px;
+    }
+
+    .footer-lower {
+        flex-direction: row; /* bleibt horizontal wie Header */
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 25px;
+        padding: 20px 25px;
+        font-size: 13px;
     }
 }

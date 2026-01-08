@@ -17,6 +17,7 @@ body {
 .logo {
     font-size: 22px;
     font-weight: bold;
+    font-family: "Avenir", sans-serif;
 }
 
 .nav nav a {
@@ -28,6 +29,40 @@ body {
     border-radius: 20px;
     text-decoration: none;
     font-size: 14px;
+}
+
+/* =========================
+   MOBILE HEADER (GLOBAL)
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 24px 20px 30px;
+        gap: 18px;
+    }
+
+    .logo {
+        font-size: 26px;
+        text-align: center;
+
+    }
+
+    .nav nav {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav nav a {
+        margin: 0;
+        padding: 10px 22px;
+        font-size: 14px;
+        border-radius: 999px;
+    }
 }
 
 
@@ -94,6 +129,7 @@ body {
     font-size: 22px;
     letter-spacing: 0.05em;
     margin-bottom: 12px;
+    text-align: center;
 }
 
 .text-box p {
@@ -101,48 +137,12 @@ body {
     font-size: 16px;
     line-height: 1.65;
     margin: 0;
-}
-
-/* =========================
-   Externer Link unten
-   ========================= */
-
-.external-link-box {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 24px;
     text-align: center;
-    background: #d895a5;
-    color: #7c1f34;
-    border-radius: 18px;
-    text-decoration: none;
-    font-family: "Avenir", sans-serif;
-    font-size: 15px;
-    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.external-link-box:hover {
-    transform: translateY(-3px);
-    opacity: 0.9;
-}
 
-/* =========================
-   Responsive
-   ========================= */
 
-@media (max-width: 600px) {
-    .project-grid {
-        gap: 40px;
-    }
 
-    .text-box {
-        max-width: 100%;
-    }
-
-    .text-box p {
-        font-size: 14px;
-    }
-}
 
 
 
@@ -234,5 +234,67 @@ body {
 
     .hero-left-bottom {
         grid-row: 4;
+    }
+}
+
+
+/* =========================
+   Footer – leicht responsiv
+   ========================= */
+
+@media (max-width: 800px) {
+
+    .footer {
+        margin-top: 120px;
+    }
+
+    .footer-upper {
+        padding: 40px 30px;
+        gap: 40px;
+    }
+
+    .footer-columns {
+        gap: 50px;
+    }
+
+    .footer-name {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+
+    .footer-lower {
+        gap: 40px;
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .footer-upper {
+        flex-direction: column;
+        align-items: flex-start; /* bewusst NICHT center */
+        padding: 30px 25px;
+        gap: 30px;
+    }
+
+    .footer-columns {
+        gap: 35px;
+    }
+
+    .footer-col h4 {
+        font-size: 13px;
+    }
+
+    .footer-col a {
+        font-size: 14px;
+    }
+
+    .footer-lower {
+        flex-direction: row; /* bleibt horizontal wie Header */
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 25px;
+        padding: 20px 25px;
+        font-size: 13px;
     }
 }
