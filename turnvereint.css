@@ -170,22 +170,7 @@ h1 {
     opacity: 0.9;
 }
 
-    /* Responsive */
-@media (max-width: 700px) {
-    h1 {
-        font-size: 32px;
-    }
 
-    .heart-badge {
-        width: 120px;
-        left: 10px;
-        top: 10px;
-    }
-
-    .text-section {
-        margin: 40px 20px;
-    }
-}
 
 /* Footer */
 .footer {
