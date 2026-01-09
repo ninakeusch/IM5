@@ -9,7 +9,8 @@ Ich habe also ein grobes Figma erstellt um die ersten paar Seiten mal etwas zu v
 und das dann so gut wie möglich versucht umzusetzen. Da ich keine Dienstleistungen anbiete, 
 soll das Portfolio mehr zu Informationszwecken dienen, man soll meine bisherigen Arbeiten und 
 Projekte sehen können. Falls man in Kontakt treten möchte, kann man das jedoch trotzdem über 
-die Kontaktseite tun, wo meine Daten deklariert sind. 
+die Kontaktseite tun, wo meine Daten deklariert sind. E-mail Adressen werden beim draufklicken 
+kopiert und Social Medias sind verlinkt. 
 
 Bei den Projekten sollen nach und nach weitere stolze Projekte ergänzt werden. Beim draufklicken 
 der Bilder wird man zu den einzelnen Projekten weitergeführt, dort erfährt man genaueres dazu. 
